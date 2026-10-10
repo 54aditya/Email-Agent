@@ -15,7 +15,11 @@ SCOPES = [
     "https://www.googleapis.com/auth/gmail.compose",
     "https://www.googleapis.com/auth/gmail.modify",
 ]
-CREDENTIALS_FILE = BASE_DIR / "credentials" / "credentials.json"
+CREDENTIALS_FILE = (
+    Path("/etc/secrets/credentials.json")
+    if Path("/etc/secrets/credentials.json").exists()
+    else (BASE_DIR / "credentials" / "credentials.json")
+)
 TOKEN_FILE = BASE_DIR / "credentials" / "token.json"
 
 
