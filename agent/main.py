@@ -69,7 +69,7 @@ def show_sent() -> None:
 async def main() -> None:
     db.init_db()
     async with MCPConnector() as conn:
-        tools = await conn.get_anthropic_tools()
+        tools = await conn.get_tools()
         agent = Agent(conn, tools)
         print(f"Email agent ready with {len(tools)} tools. Type /help for commands.\n")
 

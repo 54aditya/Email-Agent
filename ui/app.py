@@ -33,7 +33,7 @@ def queue_confirm(name: str, args: dict):
 
 async def run_turn(prompt: str) -> str:
     async with MCPConnector() as conn:
-        tools = await conn.get_anthropic_tools()
+        tools = await conn.get_tools()
         agent = Agent(
             conn,
             tools,

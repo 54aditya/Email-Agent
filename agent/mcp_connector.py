@@ -30,8 +30,8 @@ class MCPConnector:
     async def __aexit__(self, *exc) -> None:
         await self._stack.aclose()
 
-    async def get_anthropic_tools(self) -> list[dict]:
-        """Convert MCP tool definitions to the Anthropic tool-use format."""
+    async def get_tools(self) -> list[dict]:
+        """Convert MCP tool definitions to a standard tool-use format."""
         result = await self.session.list_tools()
         return [
             {

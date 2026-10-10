@@ -1,4 +1,4 @@
-# Email AI Agent (MCP + Gmail + Claude)
+# Email AI Agent (MCP + Gmail + Gemini)
 
 Chat with your Gmail. Ask the agent to read, search, summarise and send email, with your resume attached.
 
@@ -25,8 +25,8 @@ pip install -r requirements.txt
 ```
 Create a `.env` file in the root directory and fill it with your details:
 ```env
-ANTHROPIC_API_KEY=your_anthropic_api_key_here
-MODEL=claude-sonnet-5-5
+GEMINI_API_KEY=your_gemini_api_key_here
+MODEL=gemini-2.5-flash
 MAX_AGENT_STEPS=10
 
 USER_NAME=Your Name
