@@ -45,6 +45,7 @@ def fetch_token_from_code(code: str, redirect_uri: str) -> None:
     flow.redirect_uri = redirect_uri
     flow.fetch_token(code=code)
     creds = flow.credentials
+    TOKEN_FILE.parent.mkdir(parents=True, exist_ok=True)
     TOKEN_FILE.write_text(creds.to_json())
     print(f"Saved token to {TOKEN_FILE}")
 

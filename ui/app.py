@@ -8,6 +8,7 @@ Approve / Reject buttons.
 
 import asyncio
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -65,7 +66,7 @@ async def fetch_important() -> str:
 st.set_page_config(page_title="Email Agent", page_icon="📧")
 st.title("📧 Email Agent")
 
-redirect_uri = "http://localhost:8501/"  # Note: Update this to your deployed URL later
+redirect_uri = os.getenv("REDIRECT_URI", "https://email-agent-6j71.onrender.com/")
 
 if not is_authenticated():
     if "code" in st.query_params:
