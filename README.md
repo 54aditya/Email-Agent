@@ -34,7 +34,7 @@ MODEL=gemini-2.5-flash
 MAX_AGENT_STEPS=10
 
 USER_NAME=Your Name
-USER_SIGNATURE=Your Name | +91-XXXXXXXXXX | linkedin.com/in/yourprofile
+USER_SIGNATURE=Your Name | +91-XXXXXXXXXX
 USER_PROFILE=AI/ML engineer with experience in Python, LLMs, RAG, and agents.
 
 RESUME_DIR=resumes
