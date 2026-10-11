@@ -1,5 +1,9 @@
 # Email AI Agent (MCP + Gmail + Gemini)
 
+[![Live Demo](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://email-agent-6j71.onrender.com/)
+
+> 🌐 **Try it Live:** [**Open Streamlit Web App**](https://email-agent-6j71.onrender.com/) — Chat directly with your Gmail via the deployed interface!
+
 Chat with your Gmail. Ask the agent to read, search, summarise and send email, with your resume attached.
 
 ```
