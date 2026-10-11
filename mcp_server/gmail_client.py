@@ -36,6 +36,7 @@ def authenticate() -> None:
 def get_auth_url(redirect_uri: str) -> tuple[str, str]:
     flow = Flow.from_client_secrets_file(str(CREDENTIALS_FILE), scopes=SCOPES)
     flow.redirect_uri = redirect_uri
+    flow.autogenerate_code_verifier = False
     auth_url, state = flow.authorization_url(prompt='consent', access_type='offline')
     return auth_url, state
 
@@ -43,6 +44,7 @@ def get_auth_url(redirect_uri: str) -> tuple[str, str]:
 def fetch_token_from_code(code: str, redirect_uri: str) -> None:
     flow = Flow.from_client_secrets_file(str(CREDENTIALS_FILE), scopes=SCOPES)
     flow.redirect_uri = redirect_uri
+    flow.autogenerate_code_verifier = False
     flow.fetch_token(code=code)
     creds = flow.credentials
     TOKEN_FILE.parent.mkdir(parents=True, exist_ok=True)
